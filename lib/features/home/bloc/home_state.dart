@@ -15,4 +15,4 @@ class HomeErrorState extends HomeState {}
 
 class HomeNaviagteToWishlistPageActionState extends HomeActionState {}
 
-class NavigateToCartPageActionState extends HomeActionState {}
+class HomeNavigateToCartPageActionState extends HomeActionState {}
