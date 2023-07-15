@@ -1,5 +1,4 @@
 import 'package:bloc_learn/features/cart/bloc/cart_bloc.dart';
-import 'package:bloc_learn/features/home/bloc/home_bloc.dart';
 import 'package:bloc_learn/features/home/model/home_product_data_model.dart';
 import 'package:flutter/material.dart';
 
