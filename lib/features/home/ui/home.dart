@@ -1,5 +1,6 @@
 import 'package:bloc_learn/features/cart/ui/cart_page.dart';
 import 'package:bloc_learn/features/home/bloc/home_bloc.dart';
+import 'package:bloc_learn/features/home/ui/widgets/product_tile.dart';
 import 'package:bloc_learn/features/wishlist/ui/wishlist_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -43,6 +44,7 @@ class _HomeState extends State<Home> {
               ),
             );
           case HomeLoadingSuccessState:
+            final successState = state as HomeLoadingSuccessState;
             return Scaffold(
               appBar: AppBar(
                 backgroundColor: Colors.teal,
@@ -60,6 +62,12 @@ class _HomeState extends State<Home> {
                       icon: const Icon(Icons.shopping_bag_outlined))
                 ],
               ),
+              body: ListView.builder(
+                  itemCount: successState.products.length,
+                  itemBuilder: (context, index) {
+                    return ProductTile(
+                        productDataModel: successState.products[index]);
+                  }),
             );
 
           case HomeErrorState:
