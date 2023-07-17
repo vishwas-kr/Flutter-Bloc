@@ -1,3 +1,4 @@
+import 'package:bloc_learn/features/api/api_home/api_home.dart';
 import 'package:flutter/material.dart';
 
 import 'features/home/ui/home.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         //colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         //useMaterial3: true,
       ),
-      home: const Home(),
+      home: const ApiHome(),
     );
   }
 }
