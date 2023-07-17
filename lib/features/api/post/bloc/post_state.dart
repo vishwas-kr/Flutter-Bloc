@@ -16,3 +16,7 @@ class PostSuccessfulState extends PostState {
 
   PostSuccessfulState({required this.post});
 }
+
+class PostAdditionSuccessState extends PostActionState {}
+
+class PostAdditionErrorState extends PostActionState {}

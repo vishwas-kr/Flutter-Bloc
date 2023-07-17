@@ -23,4 +23,24 @@ class PostRepo {
       return [];
     }
   }
+
+  static Future<bool> addPost() async {
+    var client = http.Client();
+    try {
+      var response = await client
+          .post(Uri.parse('https://jsonplaceholder.typicode.com/posts'), body: {
+        'title': 'HAHAHHAHAHA HA ',
+        'body': 'hu huh uh huhu hu',
+        'userId': '3',
+      });
+      if (response.statusCode >= 200 && response.statusCode <= 300) {
+        return true;
+      } else {
+        return false;
+      }
+    } catch (e) {
+      log(e.toString());
+      return false;
+    }
+  }
 }
